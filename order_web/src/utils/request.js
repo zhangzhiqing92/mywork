@@ -16,8 +16,9 @@ let url = process.env.BASE_API
 if (process.env.NODE_ENV == "production") {
   url = protocol + "//" + host + "/koflms_sev/"
 }
+let urls= "http://192.168.18.58:9988/order_boot/"
 const service = axios.create({
-  baseURL: url, // api的base_url
+  baseURL: urls, // api的base_url
   timeout: 1200000, // 请求超时时间 5s
 })
 // service.defaults.retry = 3;
