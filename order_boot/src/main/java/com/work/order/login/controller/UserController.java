@@ -1,5 +1,6 @@
 package com.work.order.login.controller;
 
+import com.work.order.response.AssembleResponseMsg;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.work.order.response.ResponseBody;
@@ -17,9 +18,6 @@ public class UserController {
         Map<String,Object> resultMap = new HashMap<String,Object>();
         resultMap.put("userName","admin");
         resultMap.put("passWord","123456");
-        ResponseBody rb = new ResponseBody();
-        rb.setData(resultMap);
-        return rb;
-    }
-
+        return new AssembleResponseMsg().success(resultMap, null);
+        }
 }

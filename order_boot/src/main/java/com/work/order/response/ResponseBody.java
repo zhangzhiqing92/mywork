@@ -3,13 +3,6 @@ package com.work.order.response;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * @ClassName ResponseBody
- * @Description TODO 统一API接口返回数据结构
- * @Author guozishen
- * @Date 2018/5/16 14:19
- * @Version 1.0
- **/
 public class ResponseBody<T> implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -24,6 +17,26 @@ public class ResponseBody<T> implements Serializable {
     private T data;
     /**数字签名**/
     private String digitalSignature = "";
+    /**错误消息内容**/
+    //private ErrorMsg error;
+    /**返回消息内容**/
+    private InfoMsg info;
+
+    public InfoMsg getInfo() {
+        return info;
+    }
+
+    public void setInfo(InfoMsg info) {
+        this.info = info;
+    }
+
+    /*public ErrorMsg getError() {
+        return error;
+    }*/
+
+   /* public void setError(ErrorMsg error) {
+        this.error = error;
+    }*/
 
     public Date getTimeStamp() {
         return timeStamp;
@@ -49,4 +62,11 @@ public class ResponseBody<T> implements Serializable {
         this.data = data;
     }
 
+    public String getDigitalSignature() {
+        return digitalSignature;
+    }
+
+    public void setDigitalSignature(String digitalSignature) {
+        this.digitalSignature = digitalSignature;
+    }
 }
