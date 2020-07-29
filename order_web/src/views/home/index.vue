@@ -17,7 +17,7 @@
             </template>
             <el-menu-item-group>
               <span slot="title">分组一</span>
-              <el-menu-item index="1-1">选项1</el-menu-item>
+              <el-menu-item  index="/orderList" @click="goTo('/orderList')">我的第一个页面</el-menu-item>
               <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="分组2">
@@ -83,14 +83,7 @@
       </el-header>
 
       <el-main style="height:100%;overflow:hidden;padding:0 10px;">
-        <el-table :data="tableData">
-          <el-table-column prop="date" label="日期" width="140">
-          </el-table-column>
-          <el-table-column prop="name" label="姓名" width="120">
-          </el-table-column>
-          <el-table-column prop="address" label="地址">
-          </el-table-column>
-        </el-table>
+        <router-view></router-view>
       </el-main>
       <el-footer>
         <el-pagination
@@ -110,24 +103,13 @@
 <script>
   export default {
     data() {
-      const item = {
-        date: '2016-05-02',
-        name: '王小虎',
-        address: '上海市普陀区金沙江路 1518 弄'
-      };
       return {
-        isCollapse: false,
-        tableData: Array(10).fill(item),
+        isCollapse: false
       }
     },
     methods: {
-      handleChange () {
-        this.$emit('on-change', !this.collapsed)
-        setTimeout(function(){
-          var evt = window.document.createEvent("UIEvents");
-          evt.initUIEvent("resize", true, false, window, 0);
-          window.dispatchEvent(evt);
-        },200);
+      goTo(path) {
+        this.$router.replace(path);
       },
       handleOpen(key, keyPath) {
         console.log(key, keyPath);

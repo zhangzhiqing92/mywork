@@ -16,7 +16,12 @@ let menu=[
   },{
     path: '/home',
     name: 'home',
-    component: () => import('@/views/home/index')
+    component: () => import('@/views/home/index'),
+    children:[{
+      path: '/orderList',
+      name: 'orderList',
+      component: () => import('@/views/content/orderList')
+    }]
   }
 ]
 export default new Router({
