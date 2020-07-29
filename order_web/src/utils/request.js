@@ -1,5 +1,5 @@
 import axios from 'axios'
-import md5 from 'js-md5'
+import md5 from 'md5'
 import { JSEncrypt } from 'jsencrypt'
 import {
   Base64

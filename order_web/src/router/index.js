@@ -14,8 +14,8 @@ let menu=[
       }
     ]
   },{
-    path: '/index',
-    name: 'index',
+    path: '/home',
+    name: 'home',
     component: () => import('@/views/home/index')
   }
 ]
