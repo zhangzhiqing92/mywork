@@ -14,12 +14,23 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@tinymce/tinymce-vue": "^3.0.1",
     "axios": "^0.19.2",
+    "echarts": "^4.2.1",
     "element-ui": "^2.13.2",
     "js-md5": "^0.7.3",
     "jsencrypt": "^3.0.0-rc.1",
+    "net": "^1.0.2",
+    "nprogress": "^0.2.0",
+    "sockjs-client": "^1.4.0",
+    "stompjs": "^2.3.3",
+    "tinymce": "^4.8.5",
+    "tinymce-vue": "^1.0.0",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-axios": "^2.1.4",
+    "vue-router": "^3.0.1",
+    "vue-stomp": "0.0.5",
+    "webstomp-client": "^1.2.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

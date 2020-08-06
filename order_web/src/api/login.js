@@ -9,10 +9,10 @@ export function login(postData) {
 }
 
 
-export function certCheck() {
+export function queryOrderList(postData) {
   return request({
-    url: '/certCheck',
+    url: '/queryOrderList',
     method: 'post',
-    data: {}
+    data: postData
   })
 }

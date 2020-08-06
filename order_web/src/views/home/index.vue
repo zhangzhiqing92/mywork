@@ -18,7 +18,7 @@
             <el-menu-item-group>
               <span slot="title">分组一</span>
               <el-menu-item  index="/orderList" @click="goTo('/orderList')">我的第一个页面</el-menu-item>
-              <el-menu-item index="1-2">选项2</el-menu-item>
+              <el-menu-item  index="/webSocket" @click="goTo('/webSocket')">测试webSocket</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="分组2">
               <el-menu-item index="1-3">选项3</el-menu-item>
@@ -90,7 +90,11 @@
 </template>
 
 <script>
+  // import TagsView from "./TagsView";
   export default {
+    components: {
+      // TagsView
+    },
     data() {
       return {
         isCollapse: false

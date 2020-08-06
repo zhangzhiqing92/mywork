@@ -21,7 +21,13 @@ let menu=[
       path: '/orderList',
       name: 'orderList',
       component: () => import('@/views/content/orderList')
-    }]
+      },
+      {
+        path: '/webSocket',
+        name: 'webSocket',
+        component: () => import('@/views/content/webSocket')
+      }
+    ]
   }
 ]
 export default new Router({
